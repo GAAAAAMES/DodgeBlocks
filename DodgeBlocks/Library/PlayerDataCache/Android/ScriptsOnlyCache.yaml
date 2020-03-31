@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - GameManager
     - MainMenuManager
     - Player
+    - PlayerMovement
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
     - TMPro.TMP_FontAsset
@@ -78,11 +79,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10206}
     - Class: 114
-      Script: {instanceID: 10328}
-    - Class: 114
       Script: {instanceID: 10444}
     - Class: 114
       Script: {instanceID: 10516}
+    - Class: 114
+      Script: {instanceID: 14782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -128,6 +129,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10166}
     - Class: 114
       Script: {instanceID: 10328}
+    - Class: 114
+      Script: {instanceID: 14782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -757,7 +760,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: f0737a946dce99c95f503b604390d841
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -803,6 +806,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: f0737a946dce99c95f503b604390d841
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMovement
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

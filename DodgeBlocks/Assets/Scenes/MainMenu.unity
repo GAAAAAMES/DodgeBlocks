@@ -769,6 +769,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: mapWidth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1083666908659500528, guid: 633195259041078a281eef5f2f162760,
         type: 3}
       propertyPath: m_Name
@@ -849,11 +853,8 @@ PrefabInstance:
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: mapWidth
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6486007351196728979, guid: 633195259041078a281eef5f2f162760, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 633195259041078a281eef5f2f162760, type: 3}
 --- !u!1 &638651251
 GameObject:
