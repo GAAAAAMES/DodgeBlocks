@@ -27,7 +27,9 @@ public class Score : MonoBehaviour
 
     void AddToScore()
     {
-        scoreLabel.text = "Score: " + (int)(Time.timeSinceLevelLoad + score);
-        score += toIncreaseWith;
+	if(Time.timeScale >= 1){
+        	scoreLabel.text = "Score: " + (int)(Time.timeSinceLevelLoad + score);
+        	score += toIncreaseWith;
+	}	
     }
 }

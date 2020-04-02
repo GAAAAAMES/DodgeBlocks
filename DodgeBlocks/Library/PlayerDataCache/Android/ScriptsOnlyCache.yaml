@@ -51,15 +51,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9326}
     - Class: 114
+      Script: {instanceID: 9344}
+    - Class: 114
       Script: {instanceID: 9346}
     - Class: 114
       Script: {instanceID: 9352}
     - Class: 114
       Script: {instanceID: 9358}
     - Class: 114
+      Script: {instanceID: 9366}
+    - Class: 114
       Script: {instanceID: 9402}
     - Class: 114
       Script: {instanceID: 9404}
+    - Class: 114
+      Script: {instanceID: 9642}
     - Class: 114
       Script: {instanceID: 9838}
     - Class: 114
@@ -67,9 +73,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9922}
     - Class: 114
+      Script: {instanceID: 10086}
+    - Class: 114
       Script: {instanceID: 10192}
     - Class: 114
+      Script: {instanceID: 10232}
+    - Class: 114
       Script: {instanceID: 10354}
+    - Class: 114
+      Script: {instanceID: 10542}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -662,7 +674,7 @@ ScriptsOnlyBuild:
     className: Score
   - hash:
       serializedVersion: 2
-      Hash: 0737ce5af84ef98faf7c13067ebc51d8
+      Hash: 64fbbafe139dff2fd3c7e1aa87b2b1be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
