@@ -1,0 +1,4 @@
+#Thu Apr 02 07:23:13 EEST 2020
+base.0=/home/claudiu/DodgeBlocks/DodgeBlocks/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex
