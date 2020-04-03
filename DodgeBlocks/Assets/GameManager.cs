@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-	restartMenu.gameObject.SetActive(true);
-        StartCoroutine(SlowDown());
+
+       FindObjectOfType<AudioManager>().Stop("Theme1");
+       restartMenu.gameObject.SetActive(true);
+       StartCoroutine(SlowDown());
     }
 
     IEnumerator SlowDown()
@@ -21,16 +23,18 @@ public class GameManager : MonoBehaviour
         Time.fixedDeltaTime = Time.fixedDeltaTime / slowness;
 
         yield return new WaitForSeconds(1f/slowness );
-	Time.timeScale = 0f;
+	    Time.timeScale = 0f;
         //after 1 sec
     }
     
-    public void RestartGame(){
-   	Time.timeScale = 1f;
-        Time.fixedDeltaTime *= slowness;
-	restartMenu.gameObject.SetActive(false);
-
-        SceneManager.LoadScene("GameScene");
+    public void RestartGame()
+    {
+	    Time.timeScale = 1f;
+	    Time.fixedDeltaTime *= slowness;
+	    restartMenu.gameObject.SetActive(false);
+	    FindObjectOfType<AudioManager>().Stop("Evil laught");
+	    FindObjectOfType<AudioManager>().Play("Theme1");
+       	    SceneManager.LoadScene("GameScene");
     }
 
     public void QuitGame()

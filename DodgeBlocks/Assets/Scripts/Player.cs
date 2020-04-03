@@ -4,18 +4,19 @@ using UnityEngine;
 using UnityEngine.Audio;
 public class Player : MonoBehaviour
 {
-    public AudioSource audioSource;
     public Sprite hitMaterial;
     SpriteRenderer rend;
 
-    void Start(){	
-	rend = GetComponent<SpriteRenderer>();
-	rend.enabled = true;
+    void Start()
+    {	
+    	rend = GetComponent<SpriteRenderer>();
+    	rend.enabled = true;
     }	
 
     private void OnCollisionEnter2D()
     {
-       audioSource.Play(0);
+       FindObjectOfType<AudioManager>().Play("PlayerDeath");
+       FindObjectOfType<AudioManager>().Play("Evil laught");
        rend.sprite = hitMaterial;
        FindObjectOfType<GameManager>().EndGame();
     }
