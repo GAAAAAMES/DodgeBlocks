@@ -201,22 +201,22 @@ PrefabInstance:
     - target: {fileID: 2439958873407362270, guid: 3090355057f8018b190d60d697965f8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2439958873325156444, guid: 3090355057f8018b190d60d697965f8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2439958873117511303, guid: 3090355057f8018b190d60d697965f8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2439958872718445126, guid: 3090355057f8018b190d60d697965f8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2439958871780557721, guid: 3090355057f8018b190d60d697965f8c,
         type: 3}
@@ -1364,7 +1364,7 @@ GameObject:
   - component: {fileID: 1443732970}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1835,6 +1835,11 @@ PrefabInstance:
     - target: {fileID: 1493398727151123019, guid: 54e5595ddb5a502f59c9bcc965efb55a,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493398727151123019, guid: 54e5595ddb5a502f59c9bcc965efb55a,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1493398727151123016, guid: 54e5595ddb5a502f59c9bcc965efb55a,

@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         player.isTrigger = true;
         Color tmp = opacity.GetComponent<SpriteRenderer>().color;
-        tmp.a = 0.8f;
+        tmp.a = 0.4f;
         opacity.GetComponent<SpriteRenderer>().color = tmp;
     }
 

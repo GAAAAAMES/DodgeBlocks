@@ -10,21 +10,18 @@ public class BlockSpawner : MonoBehaviour
 
     private float timeToSpawn = 2f;
 
-    public float timeBetweenWaves = 1f;
+    public float timeBetweenWaves = 3f;
 
     void Update()
     {
-
         if(Time.time >= timeToSpawn)
         {
-            SpawnBlocks();
+            if(PowerSpawner.timeToSpawnPower>=1f)SpawnBlocks();
             timeToSpawn = Time.time + timeBetweenWaves;
         }
-        
 
     }
-
-    // Update is called once per frame
+ 
     void SpawnBlocks()
     {
         int randomIndex = Random.Range(0, spawnPoints.Length);
