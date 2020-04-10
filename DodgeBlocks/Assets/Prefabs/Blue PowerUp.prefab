@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3119543334714085705}
   - component: {fileID: 3119543334714085702}
   - component: {fileID: 3119543334714085703}
+  - component: {fileID: -5513619453503788790}
   m_Layer: 0
   m_Name: Blue PowerUp
-  m_TagString: Untagged
+  m_TagString: Power
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +97,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -176,3 +177,16 @@ PolygonCollider2D:
       - {x: 0.22925097, y: -0.268301}
       - {x: 0.22923577, y: -0.11501551}
       - {x: 0.18955606, y: -0.114473104}
+--- !u!114 &-5513619453503788790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3119543334714085700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f241ecd9493a59a48b682e900ac82b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: 0
