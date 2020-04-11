@@ -16,7 +16,7 @@ public class BlockSpawner : MonoBehaviour
     {
         if(Time.time >= timeToSpawn)
         {
-            if(PowerSpawner.timeToSpawnPower>=1f)SpawnBlocks();
+            SpawnBlocks();
             timeToSpawn = Time.time + timeBetweenWaves;
         }
 
