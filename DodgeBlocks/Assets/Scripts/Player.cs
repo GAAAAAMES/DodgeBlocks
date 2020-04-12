@@ -19,9 +19,13 @@ public class Player : MonoBehaviour
         if(isTriggerTime>0)
         {
             isTriggerTime -= Time.deltaTime;
+	    Color tmp = rend.GetComponent<SpriteRenderer>().color;
+	    tmp.a += 0.002f;
+	    rend.GetComponent<SpriteRenderer>().color = tmp;
         }
         else
         {
+	   if(GetComponent<BoxCollider2D>().isTrigger)
             FindObjectOfType<GameManager>().goBack();
         }
     }
