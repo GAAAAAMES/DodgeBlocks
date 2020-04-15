@@ -54,6 +54,15 @@ public class GameManager : MonoBehaviour
        	    SceneManager.LoadScene("GameScene");
     }
 
+    public void destroyEnemies()
+    {
+        GameObject[] toDestroy = (GameObject[])GameObject.FindGameObjectsWithTag("Block");
+        foreach (GameObject ob in toDestroy)
+        {
+            Destroy(ob.gameObject);
+        }
+    }
+
     public void QuitGame()
     {
     	Application.Quit();

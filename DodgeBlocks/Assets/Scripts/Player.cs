@@ -36,9 +36,16 @@ public class Player : MonoBehaviour
        
         if (col.gameObject.tag == "Power")
         {
-            Debug.Log("JEJE");
-            FindObjectOfType<GameManager>().goThrough();
-            isTriggerTime = 3f;
+            if (col.gameObject.name == "Blue PowerUp(Clone)")
+            {
+                Debug.Log("JEJE");
+                FindObjectOfType<GameManager>().goThrough();
+                isTriggerTime = 3f;
+            }
+            else
+            {
+                FindObjectOfType<GameManager>().destroyEnemies();
+            }
         }
         else
         {
