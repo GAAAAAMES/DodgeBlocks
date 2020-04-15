@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public float slowness = 10f;
     public GameObject restartMenu;
     public Collider2D player;
-    public SpriteRenderer opacity;
+    public SpriteRenderer opacity; 
+    public Text quoteLabel;
+    public string[] quotes={"Nice try", "You didn't see that comming", "You'll never win this game!", "You've been hacked"};
     public void EndGame()
     {
 
        FindObjectOfType<AudioManager>().Stop("Theme1");
        restartMenu.gameObject.SetActive(true);
+       int randomQuote = Random.Range(0,quotes.Length);
+       quoteLabel.text = quotes[randomQuote];
        StartCoroutine(SlowDown());
     }
 
