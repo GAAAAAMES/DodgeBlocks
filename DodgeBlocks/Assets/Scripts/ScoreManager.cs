@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    private float score = 0;
+    public float score = 0;
     public float highScore;
     public Text scoreLabel;
+    public Text coinsLabel;
     public Text highScoreLabel;
     private float toIncreaseWith;
 

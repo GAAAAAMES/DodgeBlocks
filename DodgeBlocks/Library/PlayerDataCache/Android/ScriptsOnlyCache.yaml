@@ -49,6 +49,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -701,7 +703,7 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 98e6e6135d2c69589fb4724776b4887b
+      Hash: 49e73b4fa78e152433b33f5b5f2cccf7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -875,7 +877,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: be47ea08c73a77101f8eb676d2770d4b
+      Hash: f2ed0ac4a803f8a2f8d0e53e18760fd4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreManager

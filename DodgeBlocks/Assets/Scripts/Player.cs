@@ -31,14 +31,11 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D col)
-    {
-        Debug.Log("HEHE");
-       
+    {  
         if (col.gameObject.tag == "Power")
         {
             if (col.gameObject.name == "Blue PowerUp(Clone)")
             {
-                Debug.Log("JEJE");
                 FindObjectOfType<GameManager>().goThrough();
                 isTriggerTime = 3f;
             }
@@ -51,7 +48,8 @@ public class Player : MonoBehaviour
         {
             if (GetComponent<Collider2D>().isTrigger == false)
             {
-       		rend.sprite = hitMaterial;
+                FindObjectOfType<GameManager>().destroyEnemies();
+       		    rend.sprite = hitMaterial;
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
                 FindObjectOfType<AudioManager>().Play("Evil laught");
                 FindObjectOfType<GameManager>().EndGame();

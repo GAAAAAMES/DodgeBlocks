@@ -5,14 +5,28 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    public int temp_score;
+    public int coins_added=0;
+    public Text scoreLabel;
+    public Text coinsLabel;
     public float slowness = 10f;
     public GameObject restartMenu;
     public Collider2D player;
     public SpriteRenderer opacity; 
     public Text quoteLabel;
     public string[] quotes={"Nice try", "You didn't see that comming", "You'll never win this game!", "You've been hacked"};
+
     public void EndGame()
     {
+        temp_score = 0;
+        string text_score = (scoreLabel.text);
+        for (int i = 7; i < text_score.Length; i++) temp_score =temp_score*10+ (int)char.GetNumericValue(text_score[i]);
+
+        int temp_coins = PlayerPrefs.GetInt("Coins",0);
+       temp_coins += ((temp_score-coins_added)/10);
+       PlayerPrefs.SetInt("Coins", temp_coins);
+        coinsLabel.text = "" + temp_coins;
+        Debug.Log(temp_score);
 
        FindObjectOfType<AudioManager>().Stop("Theme1");
        restartMenu.gameObject.SetActive(true);
@@ -56,7 +70,25 @@ public class GameManager : MonoBehaviour
 	    restartMenu.gameObject.SetActive(false);
 	    FindObjectOfType<AudioManager>().Stop("Evil laught");
 	    FindObjectOfType<AudioManager>().Play("Theme1");
-       	    SceneManager.LoadScene("GameScene");
+       	SceneManager.LoadScene("GameScene");
+    }
+
+    public void Revive()
+    {
+        if (PlayerPrefs.GetInt("Coins", 0) >= 50)
+        {
+            Time.timeScale = 1f;
+            Time.fixedDeltaTime *= slowness;
+            restartMenu.gameObject.SetActive(false);
+            destroyEnemies();
+            FindObjectOfType<AudioManager>().Stop("Evil laught");
+            FindObjectOfType<AudioManager>().Play("Theme1");
+            Debug.Log("timescale is " + Time.timeScale);
+            SceneManager.GetActiveScene();
+            coins_added = temp_score;
+            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) - 50);
+        }
+
     }
 
     public void destroyEnemies()
