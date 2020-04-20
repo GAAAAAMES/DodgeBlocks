@@ -56,3 +56,27 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Theme1
+    clip: {fileID: 8300000, guid: a318d211aaecee0fa978b63bf01060ae, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme1
+    clip: {fileID: 8300000, guid: a318d211aaecee0fa978b63bf01060ae, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme1
+    clip: {fileID: 8300000, guid: a318d211aaecee0fa978b63bf01060ae, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme1
+    clip: {fileID: 8300000, guid: a318d211aaecee0fa978b63bf01060ae, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -27,28 +27,55 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play(string name)
+    void Start()
     {
+        Play("Theme1");
+    }
+
+     public Sound findSound(string name){
     	Sound s = Array.Find(sounds,sound => sound.name == name);
     	if(s == null){
-    		Debug.LogWarning("Sound:"+name+"not found!");
-    		return;
-    	}
+        		Debug.Log("Sound: "+name+" not found!");
+        		return null;
+        	}
+    	return s;
+      }
+
+    public void Play(string name)
+    {
+    	Sound s = findSound(name);
+        Debug.Log(s);
     	s.source.Play();
     }
 
     public void Stop(string name)
     {
-    	Sound s = Array.Find(sounds,sound => sound.name == name);
-    	if(s == null){
-    		Debug.LogWarning("Sound:"+name+"not found!");
-    		return;
-    	}
+    	Sound s = findSound(name);
     	s.source.Stop();
     }
 
-    void Start()
+    public void Pause(string name)
     {
-    	Play("Theme1");
+        Sound s = findSound(name);
+        s.source.Pause();
     }
+
+    public void Resume(string name)
+    {
+        Play(name);
+    }    
+
+   public void Mute(string name){
+ 	Sound s = findSound(name);
+    	s.source.mute = true;	   
+   }
+  
+   public void Unmute(string name){
+	Sound s = findSound(name);
+    	s.source.mute = false;
+   }
+
+
+ 
+
 }
