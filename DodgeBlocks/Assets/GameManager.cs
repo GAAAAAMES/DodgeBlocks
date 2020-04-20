@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     public GameObject restartMenu;
     public GameObject reviveButton;
     public Collider2D player;
-    public SpriteRenderer opacity; 
+    public SpriteRenderer playerRender; 
+    public Sprite playerMaterial;
     public Text quoteLabel;
     public string[] quotes={"Nice try", "You didn't see that comming", "You'll never win this game!", "You've been hacked"};
 
@@ -42,18 +43,18 @@ public class GameManager : MonoBehaviour
     public void goThrough()
     {	
         player.isTrigger = true;
-        Color tmp = opacity.GetComponent<SpriteRenderer>().color;
+        Color tmp = playerRender.GetComponent<SpriteRenderer>().color;
         tmp.a = 0.4f;
-        opacity.GetComponent<SpriteRenderer>().color = tmp;
-	Debug.Log("GO");
+        playerRender.GetComponent<SpriteRenderer>().color = tmp;
+	    Debug.Log("GO");
     }
 
     public void goBack()
     {
         player.isTrigger = false;
-        Color tmp = opacity.GetComponent<SpriteRenderer>().color;
+        Color tmp = playerRender.GetComponent<SpriteRenderer>().color;
         tmp.a = 1f;
-        opacity.GetComponent<SpriteRenderer>().color = tmp;
+        playerRender.GetComponent<SpriteRenderer>().color = tmp;
     }
 
     IEnumerator SlowDown()
@@ -81,11 +82,12 @@ public class GameManager : MonoBehaviour
     public void Revive()
     {
         if (PlayerPrefs.GetInt("Coins", 0) >= 10)
-        {
+        {   
             Time.timeScale = 1f;
             Time.fixedDeltaTime *= slowness;
             restartMenu.gameObject.SetActive(false);
             destroyEnemies();
+            playerRender.sprite = playerMaterial;
             FindObjectOfType<AudioManager>().Stop("Evil laught");
             FindObjectOfType<AudioManager>().Play("Theme1");
             FindObjectOfType<AudioManager>().Play("Revive");

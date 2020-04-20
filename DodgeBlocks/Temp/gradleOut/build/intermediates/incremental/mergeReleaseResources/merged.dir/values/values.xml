@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DodgeBlocks</string>
+    <string name="app_name">Don\'t Get Hacked</string>
     <style name="BaseUnityTheme" parent="android:Theme.Holo.Light.NoActionBar.Fullscreen">
 </style>
     <style name="UnityThemeSelector" parent="BaseUnityTheme">

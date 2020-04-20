@@ -1156,7 +1156,8 @@ MonoBehaviour:
   restartMenu: {fileID: 1592851231}
   reviveButton: {fileID: 817911110}
   player: {fileID: 1443732968}
-  opacity: {fileID: 1443732966}
+  playerRender: {fileID: 1443732966}
+  playerMaterial: {fileID: 21300000, guid: eb6100f9dc48f383cbaf2b085c7b2d36, type: 3}
   quoteLabel: {fileID: 1034764925}
   quotes:
   - Nice try
