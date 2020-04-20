@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Text coinsLabel;
     public float slowness = 10f;
     public GameObject restartMenu;
+    public GameObject reviveButton;
     public Collider2D player;
     public SpriteRenderer opacity; 
     public Text quoteLabel;
@@ -25,9 +26,12 @@ public class GameManager : MonoBehaviour
         int temp_coins = PlayerPrefs.GetInt("Coins",0);
        temp_coins += ((temp_score-coins_added)/10);
        PlayerPrefs.SetInt("Coins", temp_coins);
+
         coinsLabel.text = "" + temp_coins;
         Debug.Log(temp_score);
-
+	if(temp_coins >=10){
+	       reviveButton.gameObject.SetActive(true);
+	}
        FindObjectOfType<AudioManager>().Stop("Theme1");
        restartMenu.gameObject.SetActive(true);
        int randomQuote = Random.Range(0,quotes.Length);
@@ -36,11 +40,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void goThrough()
-    {
+    {	
         player.isTrigger = true;
         Color tmp = opacity.GetComponent<SpriteRenderer>().color;
         tmp.a = 0.4f;
         opacity.GetComponent<SpriteRenderer>().color = tmp;
+	Debug.Log("GO");
     }
 
     public void goBack()
@@ -70,12 +75,12 @@ public class GameManager : MonoBehaviour
 	    restartMenu.gameObject.SetActive(false);
 	    FindObjectOfType<AudioManager>().Stop("Evil laught");
 	    FindObjectOfType<AudioManager>().Play("Theme1");
-       	SceneManager.LoadScene("GameScene");
+       	    SceneManager.LoadScene("GameScene");
     }
 
     public void Revive()
     {
-        if (PlayerPrefs.GetInt("Coins", 0) >= 50)
+        if (PlayerPrefs.GetInt("Coins", 0) >= 10)
         {
             Time.timeScale = 1f;
             Time.fixedDeltaTime *= slowness;
@@ -83,16 +88,18 @@ public class GameManager : MonoBehaviour
             destroyEnemies();
             FindObjectOfType<AudioManager>().Stop("Evil laught");
             FindObjectOfType<AudioManager>().Play("Theme1");
+            FindObjectOfType<AudioManager>().Play("Revive");
             Debug.Log("timescale is " + Time.timeScale);
             SceneManager.GetActiveScene();
             coins_added = temp_score;
-            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) - 50);
+            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) - 10);
         }
 
     }
 
     public void destroyEnemies()
     {
+
         GameObject[] toDestroy = (GameObject[])GameObject.FindGameObjectsWithTag("Block");
         foreach (GameObject ob in toDestroy)
         {

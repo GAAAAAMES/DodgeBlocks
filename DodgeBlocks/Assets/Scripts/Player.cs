@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-	   if(GetComponent<BoxCollider2D>().isTrigger)
+	   if(GetComponent<PolygonCollider2D>().isTrigger)
             FindObjectOfType<GameManager>().goBack();
         }
     }
@@ -35,12 +35,14 @@ public class Player : MonoBehaviour
         if (col.gameObject.tag == "Power")
         {
             if (col.gameObject.name == "Blue PowerUp(Clone)")
-            {
+            {		
+	        FindObjectOfType<AudioManager>().Play("Powerup1");	
                 FindObjectOfType<GameManager>().goThrough();
                 isTriggerTime = 3f;
             }
             else
             {
+	        FindObjectOfType<AudioManager>().Play("Powerup2");
                 FindObjectOfType<GameManager>().destroyEnemies();
             }
         }

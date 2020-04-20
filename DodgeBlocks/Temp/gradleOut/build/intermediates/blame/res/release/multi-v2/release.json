@@ -1,34 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\cezar\\Desktop\\Don-t-Get-Hacked\\DodgeBlocks\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\values-v21_values-v21.arsc.flat",
+            "outputFile": "/home/claudiu/DodgeBlocks/DodgeBlocks/Temp/gradleOut/build/intermediates/res/merged/release/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\cezar\\Desktop\\Don-t-Get-Hacked\\DodgeBlocks\\Temp\\gradleOut\\src\\main\\res\\values-v21\\styles.xml",
+                    "source": "/home/claudiu/DodgeBlocks/DodgeBlocks/Temp/gradleOut/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "2",
-                        "startColumns": "0",
+                        "startColumns": "2",
                         "startOffsets": "53",
-                        "endLines": "3",
-                        "endColumns": "8",
-                        "endOffsets": "153"
+                        "endColumns": "46",
+                        "endOffsets": "97"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endLines": "3",
-                        "endColumns": "8",
-                        "endOffsets": "154"
+                        "endColumns": "48",
+                        "endOffsets": "99"
                     }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\cezar\\Desktop\\Don-t-Get-Hacked\\DodgeBlocks\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\values_values.arsc.flat",
-            "map": [
+                },
                 {
-                    "source": "C:\\Users\\cezar\\Desktop\\Don-t-Get-Hacked\\DodgeBlocks\\Temp\\gradleOut\\src\\main\\res\\values\\styles.xml",
+                    "source": "/home/claudiu/DodgeBlocks/DodgeBlocks/Temp/gradleOut/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "5,2,7",
                         "startColumns": "0,0,0",
@@ -45,22 +38,29 @@
                         "endColumns": "8,8,8",
                         "endOffsets": "199,337,564"
                     }
-                },
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/claudiu/DodgeBlocks/DodgeBlocks/Temp/gradleOut/build/intermediates/res/merged/release/values-v21_values-v21.arsc.flat",
+            "map": [
                 {
-                    "source": "C:\\Users\\cezar\\Desktop\\Don-t-Get-Hacked\\DodgeBlocks\\Temp\\gradleOut\\src\\main\\res\\values\\strings.xml",
+                    "source": "/home/claudiu/DodgeBlocks/DodgeBlocks/Temp/gradleOut/src/main/res/values-v21/styles.xml",
                     "from": {
                         "startLines": "2",
-                        "startColumns": "2",
-                        "startOffsets": "55",
-                        "endColumns": "46",
-                        "endOffsets": "99"
+                        "startColumns": "0",
+                        "startOffsets": "53",
+                        "endLines": "3",
+                        "endColumns": "8",
+                        "endOffsets": "153"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "48",
-                        "endOffsets": "99"
+                        "endLines": "3",
+                        "endColumns": "8",
+                        "endOffsets": "154"
                     }
                 }
             ]

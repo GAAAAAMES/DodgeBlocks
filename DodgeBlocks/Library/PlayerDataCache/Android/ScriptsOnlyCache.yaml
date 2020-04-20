@@ -903,4 +903,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/cezar/Desktop/joc.apk
+  playerPath: /home/claudiu/DodgeBlocks/DodgeBlocks/app.apk

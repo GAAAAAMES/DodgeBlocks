@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 2439958872013534084, guid: 3090355057f8018b190d60d697965f8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2439958872013534084, guid: 3090355057f8018b190d60d697965f8c,
         type: 3}
@@ -1148,10 +1148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284cd007857f3664289fa01cf94f33f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temp_score: 0
+  coins_added: 0
   scoreLabel: {fileID: 1232329746}
   coinsLabel: {fileID: 796775096}
   slowness: 10
   restartMenu: {fileID: 1592851231}
+  reviveButton: {fileID: 817911110}
   player: {fileID: 1443732968}
   opacity: {fileID: 1443732966}
   quoteLabel: {fileID: 1034764925}
@@ -1253,6 +1256,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796775094}
   m_CullTransparentMesh: 0
+--- !u!1 &817911110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1367421089624968613, guid: 419b97b9c45bf7b20b9cf8cd76506a2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1966196872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &928782444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2439958872718445126, guid: 3090355057f8018b190d60d697965f8c,
@@ -1352,7 +1361,7 @@ RectTransform:
   - {fileID: 1232329744}
   - {fileID: 1592851232}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1418,7 +1427,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: fbbce6e5e1b39179dadeb7b9e13a101d, type: 3}
-    m_FontSize: 27
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 2
@@ -1426,7 +1435,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 0
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Quote
@@ -1622,7 +1631,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1407181919
 GameObject:
@@ -2115,6 +2124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: REVIVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367421089624968613, guid: 419b97b9c45bf7b20b9cf8cd76506a2f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1367421089624968633, guid: 419b97b9c45bf7b20b9cf8cd76506a2f,
         type: 3}
@@ -2678,7 +2692,7 @@ PrefabInstance:
     - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
         type: 3}
@@ -2698,6 +2712,66 @@ PrefabInstance:
     - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
         type: 3}
       propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Revive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f0a046b40573d5cab6faa5be0999277, type: 3}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Powerup1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 18ba65afd0352082aa9fca451f9e127d, type: 3}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: Powerup2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 655c6c31e9ced6c878746599014b57a2, type: 3}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947655061038908154, guid: 7eccb8054b8ec19169ba255bd7db9f6b,
+        type: 3}
+      propertyPath: sounds.Array.data[5].pitch
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

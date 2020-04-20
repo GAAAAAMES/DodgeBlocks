@@ -1,4 +1,4 @@
-#Sun Apr 19 21:20:03 EEST 2020
-base.0=C\:\\Users\\cezar\\Desktop\\Don-t-Get-Hacked\\DodgeBlocks\\Temp\\gradleOut\\build\\intermediates\\transforms\\dexMerger\\release\\0
+#Mon Apr 20 13:13:20 EEST 2020
+base.0=/home/claudiu/DodgeBlocks/DodgeBlocks/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex
