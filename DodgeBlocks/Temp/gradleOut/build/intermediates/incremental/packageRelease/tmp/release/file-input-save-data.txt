@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Apr 20 14:25:26 EEST 2020
+#Mon Apr 20 14:28:02 EEST 2020
 124.path=bin/Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll
 60.set=ASSET
 52.set=ASSET
