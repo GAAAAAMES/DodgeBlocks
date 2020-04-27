@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-	        FindObjectOfType<AudioManager>().Play("Powerup2");
+	            FindObjectOfType<AudioManager>().Play("P2");
                 FindObjectOfType<GameManager>().destroyEnemies();
             }
         }
